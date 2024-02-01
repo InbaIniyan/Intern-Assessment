@@ -33,7 +33,7 @@ This project focuses on generating embeddings for text data from both JSON and C
 - To use the code:
   1. Ensure to install the necessary libraries using `pip` command
 
-              transformers torch pandas numpy json gensim.
+              pip install transformers torch pandas numpy json gensim.
 
   3. Provide the path to the CSV file containing the text data or the JSON file with textual entries.
   4. Run the code to generate embeddings for each line or entry in the dataset.
