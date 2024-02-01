@@ -58,13 +58,14 @@ The code iterates through each line in the CSV dataset or extracts text from the
 - To use the code:
   1. Ensure to install the necessary libraries using `pip` command
 
+
   ```bash
   pip install transformers torch pandas numpy json gensim
   ```
 
-  3. Provide the path to the CSV file containing the text data or the JSON file with textual entries.
-  4. Run the code to generate embeddings for each line or entry in the dataset.
-  5. For JSON data GoogleNews-vectors-negative-300 model is used. You csn download it using this [drive link.](https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit?resourcekey=0-wjGZdNAUop6WykTtMip30g)
+  2. Provide the path to the CSV file containing the text data or the JSON file with textual entries.
+  3. Run the code to generate embeddings for each line or entry in the dataset.
+  4. For JSON data GoogleNews-vectors-negative-300 model is used. You csn download it using this [drive link.](https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit?resourcekey=0-wjGZdNAUop6WykTtMip30g)
 
 ## Conclusion:
 - These projects demonstrate how to leverage pre-trained language models like GPT-2 and Word2Vec to generate embeddings for textual data from both JSON and CSV formats. Embeddings capture the semantic meaning of text and can be used as input features for various downstream NLP tasks such as classification, clustering, and semantic similarity calculation.
