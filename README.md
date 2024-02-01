@@ -1,5 +1,22 @@
 # Project Documentation: Generating Embeddings from JSON and CSV Data
 
+## Table of Contents
+- [Introduction](#introduction)
+- [Methodologies Implemented](#methodologies-implemented)
+  - [JSON Data](#json-data)
+    - [Loading JSON Data](#loading-json-data)
+    - [Extracting Text from Data](#extracting-text-from-data)
+    - [Text Preprocessing](#text-preprocessing)
+    - [Generating Embeddings](#generating-embeddings)
+  - [CSV Data](#csv-data)
+    - [Loading CSV Data](#loading-csv-data)
+    - [Loading the Pre-Trained Model (GPT-2)](#loading-the-pre-trained-model-gpt-2)
+    - [Tokenization and Model Inference](#tokenization-and-model-inference)
+    - [Calculating Embeddings](#calculating-embeddings)
+- [Code Execution](#code-execution)
+- [Usage](#usage)
+- [Conclusion](#conclusion)
+
 ## Introduction
 This project focuses on generating embeddings for text data from both JSON and CSV formats using different methodologies and models. Embeddings are numerical representations of text that capture semantic information and are widely used in natural language processing tasks.
 
@@ -10,7 +27,7 @@ This project focuses on generating embeddings for text data from both JSON and C
   - The JSON data containing textual entries is loaded from the specified file path into the Python environment using the `json.load()` function.
 - **Extracting Text from Data**:
   - A function is defined to extract textual content from the JSON data. The function recursively traverses the JSON structure and concatenates text from specific fields.
-- **Preprocessing the Data**:
+- **Text Preprocessing**:
   - Text preprocessing is performed using the `simple_preprocess()` function from Gensim. This step tokenizes the text and performs basic preprocessing tasks such as lowercasing and punctuation removal.
 - **Generating Embeddings**:
   - Word embeddings are generated for the preprocessed text using the pre-trained Word2Vec model. The embeddings capture the semantic meaning of words in a continuous vector space.
@@ -20,20 +37,21 @@ This project focuses on generating embeddings for text data from both JSON and C
   - The CSV data containing text lines is loaded into a pandas DataFrame. The file path is specified, and the CSV data is read into the `dataset` variable.
 - **Loading the Pre-Trained Model (GPT-2)**:
   - The GPT-2 model from the transformers module is utilized for generating embeddings. The model architecture is based on the Transformer architecture and is pre-trained on vast amounts of text data.
-- **Generating Embeddings**:
-  - Embeddings are generated for each line in the dataset using the GPT-2 model. The following steps are performed iteratively for each line:
-    - Tokenization: Each line is tokenized using the GPT2 tokenizer.
-    - Model Inference: The tokenized sequence is passed through the GPT-2 model to obtain embeddings.
-    - Calculating Embeddings: The last hidden state of the model output is extracted and averaged across tokens to obtain a single embedding vector for the line.
+- **Tokenization and Model Inference**:
+  - Each line is tokenized using the GPT2 tokenizer, and the tokenized sequence is passed through the GPT-2 model to obtain embeddings.
+- **Calculating Embeddings**:
+  - The last hidden state of the model output is extracted and averaged across tokens to obtain a single embedding vector for each line in the dataset.
 
 ## Code Execution:
-- The code iterates through each line in the CSV dataset or extracts text from the JSON data, tokenizes the text, generates embeddings using the appropriate model or methodology, and prints the embeddings for each line or entry.
+The code iterates through each line in the CSV dataset or extracts text from the JSON data, tokenizes the text, generates embeddings using the appropriate model or methodology, and prints the embeddings for each line or entry.
 
 ## Usage:
 - To use the code:
   1. Ensure to install the necessary libraries using `pip` command
 
-              pip install transformers torch pandas numpy json gensim.
+  ```bash
+  pip install transformers torch pandas numpy json gensim
+  ```
 
   3. Provide the path to the CSV file containing the text data or the JSON file with textual entries.
   4. Run the code to generate embeddings for each line or entry in the dataset.
