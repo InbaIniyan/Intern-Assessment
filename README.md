@@ -32,7 +32,8 @@ The code iterates through each line in the CSV dataset, tokenizes the text, gene
 To use the code:
 1. Ensure that the necessary libraries are installed using the command transformers, torch, and pandas.
 
-   `pip install tarnsformers torch pandas`
+   ```pip install tarnsformers torch pandas```
+   
 2. Provide the path to the CSV file containing the text data [d1.csv](Assessment/data/d1.csv).
 3. Run the code to generate embeddings for each line in the dataset.
 
