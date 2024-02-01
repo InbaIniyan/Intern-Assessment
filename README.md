@@ -59,7 +59,6 @@ The code iterates through each line in the CSV dataset or extracts text from the
   1. Ensure to install the necessary libraries using `pip` command.
 
   ```
-  bash
   pip install transformers torch pandas numpy json gensim
   ```
 
