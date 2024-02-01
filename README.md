@@ -32,10 +32,10 @@ The code iterates through each line in the CSV dataset, tokenizes the text, gene
 To use the code:
 1. Ensure that the necessary libraries are installed using the command transformers, torch, and pandas.
 
-   ```pip install tarnsformers torch pandas```
-   
-2. Provide the path to the CSV file containing the text data [d1.csv](Assessment/data/d1.csv).
-3. Run the code to generate embeddings for each line in the dataset.
+         pip install tarnsformers torch pandas  
+
+3. Provide the path to the CSV file containing the text data [d1.csv](Assessment/data/d1.csv).
+4. Run the code to generate embeddings for each line in the dataset.
 
 ## Conclusion:
 This project demonstrates how to leverage pre-trained language models like GPT-2 to generate embeddings for textual data. Embeddings capture the semantic meaning of text and can be used as input features for various downstream NLP tasks such as classification, clustering, and semantic similarity calculation.
